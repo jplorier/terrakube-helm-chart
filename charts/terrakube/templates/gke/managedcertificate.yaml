@@ -16,7 +16,7 @@ spec:
   {{- if .Values.ingress.api.enabled }}
     - {{ .Values.ingress.api.domain }}
   {{- end }}
-  {{- if .Values.ingress.registry.enabled }}
+  {{- if and .Values.ingress.registry.enabled }}
     - {{ .Values.ingress.registry.domain }}
   {{- end }}
   {{- end }}
